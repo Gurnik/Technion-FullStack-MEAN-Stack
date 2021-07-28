@@ -1,0 +1,12 @@
+<h3>Add New User</h3>
+
+<form #f="ngForm" (submit)=add(f.valid)> 
+
+    Name : <input required [(ngModel)] = "user.name" type="text" name="name"><br/>
+    Email : <input required [(ngModel)] = "user.email" type="email" name="email" ngModel [email]="true"><br/>
+    
+    <br/>
+    
+    <input type="button" value="Cancel" (click)="cancel()" class="button">
+    <input type="submit" value="Add" class="button">
+</form>

@@ -1,0 +1,31 @@
+* {
+    margin: 5px;
+    padding: 5px;
+}
+
+div {
+    display: block;
+    border-width: 15px;
+    border-color: red;
+    padding: 5px;
+    margin: 10px;
+}
+
+.button-other-data {
+    background-color: #857878;
+}
+
+.button {
+    background-color: #fdb55d;
+    margin: 2px;
+}
+
+.grey {
+    background-color: #b1aaaa;
+    padding: 2px 5px;
+    margin: 5px;
+}
+
+.round_corner {
+    border-radius: 25px;
+}

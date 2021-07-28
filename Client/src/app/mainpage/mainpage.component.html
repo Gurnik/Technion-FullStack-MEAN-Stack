@@ -1,0 +1,17 @@
+<label class="main_task_bar">Search</label>
+<input class="main_task_bar" type="text" #search (keyup)="onSerach(search.value)">
+<input class="main_task_bar button" type="button" value="Add" [routerLink]='["/add-user"]'> 
+
+<div *ngIf="isSearched">
+    <div *ngFor="let user of filteredUsers">
+        <app-user-card [user]="user" [isIdClicked]="userCardColorHandler(user._id)" (notify)="onUserIdWhenClicked($event)"></app-user-card>
+    </div>
+</div>
+
+<div *ngIf="!isSearched">
+    <div *ngFor="let user of users">
+        <app-user-card [user]="user" [isIdClicked]="userCardColorHandler(user._id)" (notify)="onUserIdWhenClicked($event)"></app-user-card>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,16 @@
+.black_border {
+    border: 2px solid black;
+    width: 40%;
+    padding: 2px;
+    margin: 20px;
+}
+
+.align_text {
+    margin: 20px;
+}
+
+.button {
+    background-color: #fdb55d;
+    margin: 5px;
+    padding: 5px;
+}

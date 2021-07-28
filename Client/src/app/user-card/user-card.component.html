@@ -1,0 +1,16 @@
+<form #f="ngForm" (submit)="onUpdateClick(f.valid)">
+    <div [style.border]="checkTasksStatus()? '2px solid green' : '2px solid red'" [style.background-color]="isIdClicked? '#fcce79' : 'white'">
+        <label [routerLink]='["/user-activities", user._id]' (click)="onIdClick()">ID: {{user._id}}</label> <br/>
+        <label>Name:</label> <input required [(ngModel)]="user.name" type="text" value="{{user.name}}" name="name" [style.background-color]="isIdClicked? '#fcce79' : 'white'"> <br/>
+        <label>Email:</label> <input required [(ngModel)]="user.email" type="text" value="{{user.email}}" name="email" ngModel [email]="true" [style.background-color]="isIdClicked? '#fcce79' : 'white'"> <br/>
+        <input (click)="otherDataClick()" (mouseover)="otherDataOnMouse()" class="button-other-data" type="button" value="Other Data"> 
+        <br/>
+        <div class="grey round_corner" *ngIf="isOtherDataVisible">
+            <label>Street:&nbsp;&nbsp;&nbsp;</label><input class="grey" [(ngModel)]="user.street" type="text" value="{{user.street}}" name="street"> <br/>
+            <label>City: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <input class="grey" [(ngModel)]="user.city" type="text" value="{{user.city}}" name="city"> <br/>
+            <label>Zipcode:</label> <input class="grey" [(ngModel)]="user.zipcode" type="text" value="{{user.zipcode}}" name="zipcode"> <br/>
+        </div>
+        <input class="button" type="submit" value="Update">
+        <input (click)="onDeleteClick()" class="button" type="button" value="Delete">
+    </div>
+</form>

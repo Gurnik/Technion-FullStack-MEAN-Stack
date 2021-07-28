@@ -1,0 +1,8 @@
+<div>
+    <form (submit)="onClickTaskComplete()">
+        Title : {{task.title}}
+        <br/>
+        Completed : {{task.completed}} 
+        <input type="submit" value="Mark Completed" *ngIf="!isTaskCompleted" class="button align_right">
+    </form>
+</div>
